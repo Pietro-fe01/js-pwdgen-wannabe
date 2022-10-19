@@ -28,6 +28,8 @@ document.getElementById("pwd").innerHTML = ("*".repeat(passwordGenerator.length)
 
 
 // FUNZIONI BOTTONE PASSWORD
+document.getElementById("ms-open-eye").classList.remove("fa-eye");
+
 var indicatore = true;
 
 function showPwd() {
@@ -40,10 +42,15 @@ function showPwd() {
 
   function showPwdTrue(){
     document.getElementById("pwd").innerHTML = passwordGenerator;
+    document.getElementById("ms-closed-eye").classList.remove("fa-eye-slash");
+    document.getElementById("ms-open-eye").classList.add("fa-eye");
     return indicatore = false;
   }
   function showPwdFalse(){
     document.getElementById("pwd").innerHTML = ("*".repeat(passwordGenerator.length));
+    document.getElementById("ms-closed-eye").classList.add("fa-eye-slash");
+    document.getElementById("ms-open-eye").classList.remove("fa-eye");
     return indicatore = true;
   }
+
 

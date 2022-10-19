@@ -19,15 +19,15 @@ div{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 20%;
+    width: 250px;
 }
 
 button{
     background-color: transparent;
     border: none;
+    cursor: pointer;
 }
 
-#ms-pass-container button i{
+#ms-pass-container button i:first-child{
     transform: translate(5px, 0px);
-    cursor: pointer;
 }
