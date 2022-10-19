@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Password Generator</title>
     <link rel="stylesheet" href="css/style.css">
+    <!-- Fontawesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- /Fontawesome CDN -->
 </head>
 <body>
     <div>
@@ -25,7 +28,17 @@
 
     <div>
         <h2>La tua password generata è:</h2>
-        <span id="password"></span>
+        <div id="ms-pass-container">
+            <span id="pwd"></span>
+            <button onclick="showPwd()">
+                <i class="fa-solid fa-eye"></i>
+            </button>
+        </div>
+        <p>
+            NOTE:<br> 
+            - Gli asterischi "*" vengono generati della stessa lunghezza della password generata<br>
+            - Cliccare sull'icona "<i class="fa-solid fa-eye"></i>" per visualizzare la password!
+        </p>
     </div>
     
     <script src="js/script.js"></script>

@@ -16,10 +16,34 @@ const passwordGenerator = `${userFirstName}${userLastName}${userFavoriteColor}76
 
 console.log(passwordGenerator); //stampo la password generata nella console
 
+// Stampo le informazioni inserite dall'utente sotto le varie diciture:
 document.getElementById("ms-name").innerHTML = userFirstName;
 
 document.getElementById("ms-last-name").innerHTML = userLastName;
 
 document.getElementById("ms-fav-color").innerHTML = userFavoriteColor;
 
-document.getElementById("password").innerHTML = passwordGenerator; //stampo la password geberata all'interno della pagina HTML
+document.getElementById("pwd").innerHTML = ("*".repeat(passwordGenerator.length));
+
+
+
+// FUNZIONI BOTTONE PASSWORD
+var indicatore = true;
+
+function showPwd() {
+    if (indicatore == true){
+        showPwdTrue();
+    } else {
+        showPwdFalse();
+    }
+  }
+
+  function showPwdTrue(){
+    document.getElementById("pwd").innerHTML = passwordGenerator;
+    return indicatore = false;
+  }
+  function showPwdFalse(){
+    document.getElementById("pwd").innerHTML = ("*".repeat(passwordGenerator.length));
+    return indicatore = true;
+  }
+
