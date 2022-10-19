@@ -16,4 +16,10 @@ const passwordGenerator = `${userFirstName}${userLastName}${userFavoriteColor}76
 
 console.log(passwordGenerator); //stampo la password generata nella console
 
+document.getElementById("ms-name").innerHTML = userFirstName;
+
+document.getElementById("ms-last-name").innerHTML = userLastName;
+
+document.getElementById("ms-fav-color").innerHTML = userFavoriteColor;
+
 document.getElementById("password").innerHTML = passwordGenerator; //stampo la password geberata all'interno della pagina HTML
